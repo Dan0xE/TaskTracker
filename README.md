@@ -3,4 +3,4 @@
 `- Install dependencies with Npm I`
 `- Run Project with Yarn Dev`
 
-**If you're getting the error 'failed to install electron correctly' run yarn add electron and try again!**
+**If you're getting the error 'failed to install Electron correctly' run yarn add electron and try again!**

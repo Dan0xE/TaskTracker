@@ -1,0 +1,61 @@
+{
+  "name": "trackerapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@themesberg/flowbite": "^1.0.7",
+    "concurrently": "^6.3.0",
+    "daisyui": "^1.16.1",
+    "electron": "^15.3.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-packager": "^15.4.0",
+    "json-server": "^0.17.0",
+    "react": "^17.0.2",
+    "react-custom-scrollbars-2": "^4.4.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-modern-calendar-datepicker": "^3.1.6",
+    "react-router-dom": "^6.0.0",
+    "react-scripts": "4.0.3",
+    "wait-on": "^6.0.0",
+    "web-vitals": "^1.0.1"
+  },
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently -k \"yarn start\" \"yarn server\"  \"yarn electron\"",
+    "electron": "wait-on tcp:3000 && electron ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.10",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  }
+}

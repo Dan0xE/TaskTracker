@@ -14,7 +14,7 @@ const Task = ({
     <div
       className={`task shadow-2xl hover:shadow-none hover:bg-purple-700 hover:translate-x-1 duration-100 ease-linear bg-primary rounded-xl ${
         task.reminder ? "reminder" : " "
-      }`} //changes border on onDoubleClick
+      }`}
       onDoubleClick={() => onToggle(task.id)}
     >
       <h3>

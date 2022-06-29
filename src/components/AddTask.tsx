@@ -6,6 +6,12 @@ const AddTask = ({ onAdd }: any) => {
   const [time, setTime] = useState("");
   const [reminder, setReminder] = useState(false);
 
+  const currTime = new Date().toLocaleTimeString();
+
+  setTimeout(() => {
+    console.log(day);
+  }, 10000);
+
   const onSubmit = (e: any) => {
     e.preventDefault();
     if (!text || !day || !time) {
@@ -33,9 +39,10 @@ const AddTask = ({ onAdd }: any) => {
         <input
           type="text"
           placeholder="Add Task"
-          className="shadow-2xl  rounded input-primary"
+          className="shadow-2xl rounded input-primary"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          minLength={2}
         />
       </div>
       <div className="form-control shadow-2xl">
@@ -43,9 +50,10 @@ const AddTask = ({ onAdd }: any) => {
         <input
           type="date"
           placeholder="Add Day & Time"
-          className="shadow-2xl  rounded input-primary"
+          className="shadow-2xl rounded input-primary"
           value={day}
           onChange={(e) => setDay(e.target.value)}
+          min={new Date().toISOString().split("T")[0]}
         />
       </div>
       <div className="form-control shadow-2xl">
@@ -56,6 +64,11 @@ const AddTask = ({ onAdd }: any) => {
           className="shadow-2xl  rounded input-primary"
           value={time}
           onChange={(e) => setTime(e.target.value)}
+          // min={
+          //   new Date().toISOString().split("T")[0] <= day
+          //     ? currTime.split(":")[0] + ":" + currTime.split(":")[1]
+          //     : "00:00"
+          // }
         />
       </div>
 

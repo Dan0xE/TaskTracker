@@ -1,13 +1,14 @@
 import { FaTimes } from "react-icons/fa";
+import { task } from "../@types";
 
 const Task = ({
   task,
   onDelete,
   onToggle,
 }: {
-  task: any;
-  onDelete: any;
-  onToggle: any;
+  task: task;
+  onDelete: (id: number) => void;
+  onToggle: (id: number) => void;
 }) => {
   return (
     <div

@@ -1,13 +1,14 @@
 import Task from "./Task";
+import { task } from "../@types";
 
 const Tasks = ({
   tasks,
   onDelete,
   onToggle,
 }: {
-  tasks: any;
-  onDelete: any;
-  onToggle: any;
+  tasks: task;
+  onDelete: () => void;
+  onToggle: () => void;
 }) => {
   return (
     <>

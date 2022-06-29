@@ -7,7 +7,7 @@ export const Button = ({
 }: {
   color: string;
   text: string;
-  onClick: any;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }) => {
   return (
     <div>

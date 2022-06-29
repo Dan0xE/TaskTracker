@@ -7,7 +7,7 @@ export const Header = ({
   showAdd,
 }: {
   title: string;
-  onAdd: any;
+  onAdd: () => void;
   showAdd: boolean;
 }) => {
   return (

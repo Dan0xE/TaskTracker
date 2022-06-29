@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 import { useState, useEffect } from "react";
+import { sendNotification } from "./utils/browserNotis";
 
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
@@ -37,7 +38,7 @@ const App = () => {
     return data;
   };
 
-  //autocomplete on tasksearch
+  //TODO => autocomplete on tasksearch
 
   //add task function
 
@@ -52,7 +53,6 @@ const App = () => {
 
     const data = await res.json();
 
-    //@ts-ignore
     setTasks([...tasks, data]);
   };
 
